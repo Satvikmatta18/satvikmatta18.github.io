@@ -14,7 +14,7 @@ const config: QuartzConfig = {
     enablePopovers: false,
     analytics: null,
     locale: "en-US",
-    baseUrl: "satvikmatta.github.io",
+    baseUrl: "satvikmatta18.github.io",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {

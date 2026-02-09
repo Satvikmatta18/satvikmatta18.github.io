@@ -8,15 +8,13 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "Satvik Matta",
     pageTitleSuffix: "",
     enableSPA: true,
-    enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
+    enablePopovers: false,
+    analytics: null,
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "satvikmatta.github.io",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {

@@ -4,7 +4,7 @@ title: Satvik Matta
 
 I study mathematics and computer science at UC San Diego, interested in machine learning, efficient inference, and generative models. 
 
-Currently, I do research at the [Hao AI Lab](https://hao-ai-lab.github.io/) at UCSD, where I work on efficient world models for fast video generation. I'm also working with [Google DeepMind](https://deepmind.google/) and [UCSD Scripps](https://scripps.ucsd.edu/) on 3D diffusion Gaussian models for coral reef imagery.
+Currently, I do research at the [Hao AI Lab](https://hao-ai-lab.github.io/) at UCSD, where I work on efficient world models. I'm also working with [Google DeepMind](https://deepmind.google/) and [UCSD Scripps](https://scripps.ucsd.edu/) on 3D diffusion Gaussian models for coral reef imagery.
 
 Previously, I interned at [NVIDIA NIMs](https://developer.nvidia.com/nim), optimizing open-source model inference and integrating disaggregated serving. I also interned at [Meta](https://about.meta.com/), working the ads team on RLHF pipelines for LLaMA and ranking models. 
 

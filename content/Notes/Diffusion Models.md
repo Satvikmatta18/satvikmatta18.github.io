@@ -8,10 +8,9 @@ It defines two stochastic processes:
 • **Forward process**: adds noise to real data over many timesteps until it becomes pure Gaussian noise  
 • **Reverse process**: a neural network learns to remove this noise step-by-step to recover structured data
 
-The process is **stochastic** because each step samples from a Gaussian distribution, allowing the model to generate diverse outputs.
+The process is **stochastic** because each step samples from a Gaussian distribution.
 
-DDPM uses 100s–1000s of steps, where each step removes a small amount of noise, transforming pure noise into realistic data.
-
+DDPM uses 100s–1000s of steps. 
 ## SDE (stochastic differential equation)
 
 Continuous diffusion is modeled by a Stochastic Differential Equation (SDE):
@@ -23,7 +22,7 @@ $$dx = f(x,t)dt + g(t)dW$$
 - *g(t)*: Noise scaling
 - *dW*: Gaussian noise increment
 
-In this framework, DDPM's forward process adds noise via the SDE, while the reverse process is trained to undo that evolution.
+DDPM's forward process adds noise via the SDE, while the reverse process is trained to undo that.
 ### Forward process
 
 **Image → randomly add noise k times → Gaussian noise**
@@ -31,8 +30,8 @@ In this framework, DDPM's forward process adds noise via the SDE, while the reve
 $$
 X_0  \sim q(X_0)
 $$
-$X_0$: input image/video/embedding
-$q(x)$: real data distribution
+- $X_0$: input image/video/embedding
+- $q(x)$: real data distribution
 
 #### 1. Add noise at each timestep
 
@@ -55,7 +54,7 @@ This means $x_t = \sqrt{1-\beta_t}\,x_{t-1} + \sqrt{\beta_t}\,\epsilon_t$
 - $\sqrt{1-\beta_t}$: how much signal is preserved from older data
 - $\sqrt{\beta_t}$: how much new noise is added 
 
-The noise increases over timesteps according to noise schedule, gradually destroying signal. The schedule is typically chosen so that early steps add little noise (preserving structure) and later steps add more (approaching pure noise).
+The noise increases over timesteps according to noise schedule, gradually destroying signal. The schedule is typically chosen so that early steps add little noise and later steps add more.
 
 #### 2. Signal retention factor
 
@@ -98,9 +97,7 @@ $$
 q(x_{1:T} \mid x_0) = \prod_{t=1}^{T} q(x_t \mid x_{t-1})
 $$
 
-The forward process is a Markov chain, meaning each step depends only on the previous step, we never need to look further back. This makes the math tractable and lets us derive closed-form expressions for $q(x_t \mid x_0)$.
-
----
+The forward process is a Markov chain, meaning each step depends only on the previous step. This makes the math tractable.
 
 ### Reverse diffusion process (removing noise)
 
@@ -108,7 +105,7 @@ The reverse process is a learned stochastic process that gradually removes noise
 
 **Gaussian noise → iterative denoising → real data**
 
-We begin with pure noise and run the process backwards. The key insight is that if we learn the reverse transitions $p_\theta(x_{t-1} \mid x_t)$ well enough, we can sample from the data distribution.
+We begin with pure noise and run the process backwards. The key insight is that if we learn the reverse transitions $p_\theta(x_{t-1} \mid x_t)$ , we can sample from the data distribution.
 
 $$
 x_T \sim \mathcal{N}(0,I)
@@ -163,7 +160,7 @@ $$
 - $x_0$: clean data
 - $\epsilon$: Gaussian noise we added
 
-We train the network to predict the noise $\epsilon$ (not $x_0$ or $\mu_{t-1}$ directly), it gives a simple well-scaled target. 
+We train the network to predict the noise $\epsilon$ (not $x_0$ or $\mu_{t-1}$ directly).
 
 The network outputs $\epsilon_\theta(x_t, t)$; we remove that from $x_t$ to recover the cleaner signal.
 
@@ -211,9 +208,9 @@ So the estimated clean sample $\hat{x}_0$ is the noisy sample minus the predicte
 
 #### 3. Training loss: MSE
 
-The loss trains the network to correctly identify the noise in noisy samples. 
+The loss trains the network to identify the noise in noisy samples. 
 
-Once it can predict the true noise $\epsilon$ (what we added during the forward pass) accurately with $\epsilon_\theta(x_t, t)$ (its prediction given $x_t$ and $t$), it can remove it and recover clean data:
+Once it can predict the true noise $\epsilon$ accurately with $\epsilon_\theta(x_t, t)$, it can remove it and recover clean data:
 
 $$
 \mathcal{L} = \mathbb{E}_{x_0, \epsilon, t}\left[\|\epsilon - \epsilon_\theta(x_t, t)\|^2\right]
@@ -221,7 +218,7 @@ $$
 
 ### Reverse sampling using predicted noise
 
-At inference we start from pure noise $x_T$ and run backwards. At each step we plug the network's predicted noise $\epsilon_\theta(x_t, t)$ into the analytical reverse-step formula (derived from the Gaussian form of the forward process):
+At inference we start from pure noise $x_T$ and run backwards. At each step we plug the network's predicted noise $\epsilon_\theta(x_t, t)$ into the reverse-step formula:
 
 $$
 x_{t-1} = \frac{1}{\sqrt{\alpha_t}}\left(x_t - \frac{1-\alpha_t}{\sqrt{1-\bar{\alpha}_t}}\epsilon_\theta(x_t, t)\right) + \sigma_t z

@@ -242,7 +242,7 @@ After enough steps, pure noise becomes structured data.
 - **Reverse process** removes noise to generate data: $x_T$ → $x_0$ 
 
 
-## DDIM (Denoising Diffusion Implicit Models)
+## [DDIM (Denoising Diffusion Implicit Models)](https://arxiv.org/abs/2010.02502)
 
 From the DDPM equations, we know that there is random noise added. However it's possible to follow the path of the noise without having random noise. This can be done **deterministically**.
 

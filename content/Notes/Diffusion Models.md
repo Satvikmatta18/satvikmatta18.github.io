@@ -227,7 +227,9 @@ $$
 
 
 This turns the current noisy sample $x_t$ into a cleaner sample $x_{t-1}$. 
-- The formula has two parts: subtract the predicted noise from $x_t$ to denoise 
+
+The formula has two parts: 
+- subtract the predicted noise from $x_t$ to denoise 
 - Add a small random draw $\sigma_t z$ for diversity. 
 
 After enough steps, pure noise becomes structured data.

@@ -1,17 +1,12 @@
-# Quartz v4
+# ekzhang.github.io
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+Source code for my [personal website](https://www.ekzhang.com/), hosted on
+GitHub Pages.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+This website is powered by [SvelteKit](https://kit.svelte.dev/) and
+[Tailwind CSS](https://tailwindcss.com/). To develop, run:
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
-
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
-
-## Sponsors
-
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+```sh-session
+$ npm install
+$ npm run dev
+```

@@ -2,10 +2,7 @@
   import Seo from "$lib/components/Seo.svelte";
 </script>
 
-<Seo
-  title="Satvik Matta – Resume"
-  description="Resume for Satvik Matta."
-/>
+<Seo title="Satvik Matta – Resume" description="Resume for Satvik Matta." />
 
 <section class="layout-md py-12">
   <h2 class="heading2">Resume</h2>

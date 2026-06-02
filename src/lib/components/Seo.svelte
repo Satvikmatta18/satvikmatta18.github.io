@@ -9,9 +9,6 @@
   <meta name="description" content={description} />
   <meta property="og:title" content={ogTitle ?? title} />
   <meta property="og:description" content={description} />
-  <meta
-    property="og:image"
-    content="/favicon.svg"
-  />
+  <meta property="og:image" content="/favicon.svg" />
   <meta name="twitter:card" content="summary_large_image" />
 </svelte:head>

@@ -16,11 +16,10 @@
 
     <p>
       I am currently doing research at
-      <a class="link" href="https://deepmind.google/">Google DeepMind</a> on
-      3D reconstruction for coral reefs and at <a
-        class="link"
-        href="https://hao-ai-lab.github.io/">Hao AI Lab</a
-      > on world models. Previously, I worked on post-training at
+      <a class="link" href="https://deepmind.google/">Google DeepMind</a> on 3D
+      reconstruction for coral reefs and at
+      <a class="link" href="https://hao-ai-lab.github.io/">Hao AI Lab</a>
+      on world models. Previously, I worked on post-training at
       <a class="link" href="https://about.meta.com/">Meta</a> and inference at
       <a class="link" href="https://developer.nvidia.com/nim">NVIDIA</a>.
     </p>

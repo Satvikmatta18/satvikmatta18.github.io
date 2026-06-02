@@ -5,6 +5,9 @@ on:
     branches:
       - v4
 
+permissions:
+  contents: write
+
 jobs:
   build:
     name: Build and Deploy
@@ -29,3 +32,4 @@ jobs:
           branch: gh-pages
           folder: build
           single-commit: true
+          token: ${{ secrets.GITHUB_TOKEN }}

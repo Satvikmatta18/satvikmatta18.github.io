@@ -42,7 +42,7 @@
 
     <div class="resume-item">
       <div class="resume-head">
-        <h3 class="text-black text-lg">NVIDIA NIMs / Dynamo</h3>
+        <h3 class="text-black text-lg">NVIDIA</h3>
         <div class="resume-dates">Sep 2025 - Dec 2025</div>
       </div>
       <p class="text-neutral-600">Disaggregated serving @ NIMs and Dynamo</p>

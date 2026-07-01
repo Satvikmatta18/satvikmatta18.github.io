@@ -15,11 +15,12 @@
 
 <div class="grid gap-y-4">
   {#each data as item}
+    {@const isExternal = item.link.startsWith("http")}
     <a
       href={item.link}
       class="block -mx-3 px-3 py-2 hover:bg-neutral-100 transition-colors"
-      target="_blank"
-      rel="noreferrer"
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noreferrer" : undefined}
     >
       <div class="flex flex-col sm:flex-row sm:items-end mb-1.5">
         <div class="text-lg text-black">

@@ -1,3 +1,11 @@
+essays:
+  - title: Flywheel of Humanity
+    date: 2026-06-30
+    summary: >
+      A framework for how AI, energy, robots, science, biology, and space can
+      compound into a closed-loop civilization.
+    link: /writing/flywheel-of-humanity
+
 technology:
   - title: "WireGuard at Modal: Static IPs for Serverless Containers"
     date: 2024-12-02

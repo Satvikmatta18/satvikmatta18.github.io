@@ -11,9 +11,17 @@
     <div class="resume-item">
       <div class="resume-head">
         <h3 class="text-black text-lg">NVIDIA</h3>
-        <div class="resume-dates">Incoming</div>
+        <div class="resume-dates">Present</div>
       </div>
-      <p class="text-neutral-600">Distributed training @ GEAR</p>
+      <p class="text-neutral-600">Robot foundation models</p>
+    </div>
+
+    <div class="resume-item">
+      <div class="resume-head">
+        <h3 class="text-black text-lg">Google</h3>
+        <div class="resume-dates">Jun 2026 - Sep 2026</div>
+      </div>
+      <p class="text-neutral-600">Moonshot · Physics-based world models</p>
     </div>
 
     <div class="resume-item">
